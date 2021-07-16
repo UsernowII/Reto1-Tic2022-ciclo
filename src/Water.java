@@ -11,6 +11,7 @@ public class Water {
         this.discount = discount;
     }
 
+
     public void operation() {
         int status;
         int consumption;

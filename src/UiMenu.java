@@ -6,7 +6,7 @@ public class UiMenu {
     Water waterService = new Water();
     NaturalGas gasService = new NaturalGas();
 
-
+    static Scanner sc = new Scanner(System.in);
     public void showMenu() {
 
         int response = 0;
@@ -24,7 +24,7 @@ public class UiMenu {
             System.out.println();
             System.out.println("Opcion:");
             //Captura de datos por teclado
-            Scanner sc = new Scanner(System.in);
+
             response = Integer.parseInt(sc.nextLine());
 
             switch (response) {
@@ -46,4 +46,6 @@ public class UiMenu {
             }
         } while (response != 4);
     }
+
+
 }

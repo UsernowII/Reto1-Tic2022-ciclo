@@ -1,18 +1,16 @@
-package Ui;
-
-import Controller.Energy;
-import Controller.NaturalGas;
-import Controller.Water;
-
 import java.util.Scanner;
 
 public class UiMenu {
 
+    Energy energyService = new Energy();
+    Water waterService = new Water();
+    NaturalGas gasService = new NaturalGas();
 
-    public static void showMenu(){
 
-        int response =0;
-        do{
+    public void showMenu() {
+
+        int response = 0;
+        do {
             System.out.println();
             System.out.println();
             System.out.println("PAGO DE SERVICIOS PUBLICOS");
@@ -27,17 +25,17 @@ public class UiMenu {
             System.out.println("Opcion:");
             //Captura de datos por teclado
             Scanner sc = new Scanner(System.in);
-            response =Integer.parseInt(sc.nextLine());
+            response = Integer.parseInt(sc.nextLine());
 
-            switch (response){
+            switch (response) {
                 case 1:
-                    Energy.operation();
+                    energyService.operation();
                     break;
                 case 2:
-                    Water.operation();
+                    waterService.operation();
                     break;
                 case 3:
-                    NaturalGas.operation();
+                    gasService.operation();
                     break;
                 case 4:
                     System.out.println("Hasta pronto");
@@ -46,10 +44,6 @@ public class UiMenu {
                     System.out.println("Please select a correct option ");
                     break;
             }
-        }while (response!= 4);
-
-
+        } while (response != 4);
     }
-
-
 }

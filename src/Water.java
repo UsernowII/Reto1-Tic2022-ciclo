@@ -1,22 +1,28 @@
-package Controller;
-
 import java.util.Scanner;
 
-public class NaturalGas {
+public class Water {
+    private final int unitMeasure;
+    private final double impost ;
+    private double discount ;
 
-    public static void operation() {
-        int status = 0;
-        int cubicMeter = 5234;
-        double impost = 0.01;
-        double total = 0;
-        double discount = 0;
+    public Water() {
+        this.unitMeasure = 9256;
+        this.impost = 0.01;
+        this.discount = discount;
+    }
+
+    public void operation() {
+        int status;
+        int consumption;
+        int total;
         Scanner sc = new Scanner(System.in);
+
         System.out.println("Estrato del inmueble:");
         status = sc.nextInt();
         System.out.println("Consumo del inmueble");
-        int consumption = sc.nextInt();
+        consumption = sc.nextInt();
 
-        total = cubicMeter * consumption;
+        total = this.unitMeasure * consumption;
 
         if (status > 0 && status <= 2) {
             discount = total * 0.50;
@@ -25,11 +31,11 @@ public class NaturalGas {
             discount = total * 0.10;
             discount = (-discount);
         } else {
-            discount = total * 0.25;
+            discount = total * 1.25;
         }
 
         System.out.println("El consumo fue: "+ consumption);
-        System.out.println("Valor de unidad: "+ cubicMeter);
+        System.out.println("Valor de unidad: "+ this.unitMeasure);
         System.out.println("Estrato del inmueble: "+ status);
         System.out.println("Costo total: " + total);
         System.out.println("Descuento o sobrecoste: "+ discount);

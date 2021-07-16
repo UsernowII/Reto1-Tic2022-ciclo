@@ -1,9 +1,9 @@
-import Ui.UiMenu;
-
 public class Main {
     public static void main(String[] args) {
 
-        UiMenu.showMenu();
+
+        UiMenu menu = new UiMenu();
+        menu.showMenu();
 
     }
 
